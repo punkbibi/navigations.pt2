@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigacia"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        tools:layout="@layout/fragment_1"
+        android:name="com.example.bottomnavigation_part2.fragmrntulikebi.f1"
+        android:label="f1" >
+        <action
+            android:id="@+id/action_home_to_notifi"
+            app:destination="@id/notifi" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifi"
+        tools:layout="@layout/fragment_2"
+        android:name="com.example.bottomnavigation_part2.fragmrntulikebi.f2"
+        android:label="f2" >
+        <action
+            android:id="@+id/action_notifi_to_profili"
+            app:destination="@id/profili" />
+        <argument
+            android:name="text"
+            app:argType="string"
+            android:defaultValue="please, enter  text." />
+    </fragment>
+    <fragment
+        android:id="@+id/profili"
+        tools:layout="@layout/f3"
+        android:name="com.example.bottomnavigation_part2.fragmrntulikebi.fragment3"
+        android:label="fragment3" >
+        <argument
+            android:name="finish"
+            app:argType="string" />
+    </fragment>
+</navigation>
